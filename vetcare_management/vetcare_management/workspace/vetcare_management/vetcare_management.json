@@ -3,7 +3,7 @@
   "name": "Vetcare Management",
   "label": "Vetcare Management",
   "title": "Vetcare Management",
-  "icon": "fa fa-paw",
+  "icon": "🐾",
   "module": "Vetcare Management",
   "public": 1,
   "is_standard": 1,
@@ -12,437 +12,82 @@
   "developer_mode_only": 0,
   "disable_user_customization": 0,
   "hide_custom": 0,
-  "restrict_to_domain": "",
-  "for_user": "",
-  "sequence_id": 22,
-  "creation": "2024-01-01 00:00:00.000000",
-  "modified": "2024-01-01 00:00:00.000000",
-  "modified_by": "Administrator",
-  "owner": "Administrator",
-  "docstatus": 0,
-  "idx": 0,
-
-  "charts": [
-    {
-      "chart_name": "Appointments This Month",
-      "label": "Appointments This Month"
-    },
-    {
-      "chart_name": "Revenue Trend",
-      "label": "Revenue Trend"
-    },
-    {
-      "chart_name": "Patient Status Overview",
-      "label": "Patient Status Overview"
-    }
-  ],
-
+  "sequence_id": 10,
+  "charts": [],
   "shortcuts": [
     {
+      "label": "New Appointment",
       "type": "DocType",
       "doc_view": "new",
-      "link_to": "Vet Appointment",
-      "label": "New Appointment"
+      "link_to": "Vet Appointment"
     },
     {
+      "label": "Patient Pets",
       "type": "DocType",
-      "link_to": "Patient Pet",
-      "label": "Patient Pets"
+      "link_to": "Patient Pet"
     },
     {
+      "label": "Pet Owners",
       "type": "DocType",
-      "link_to": "Pet Owner",
-      "label": "Pet Owners"
+      "link_to": "Pet Owner"
     },
     {
+      "label": "Vet Consultation",
       "type": "DocType",
-      "link_to": "Veterinarian",
-      "label": "Veterinarian"
+      "link_to": "Vet Consultation"
     },
     {
-      "type": "DocType",
-      "link_to": "Vet Consultation",
-      "label": "Vet Consultation"
-    },
-    {
-      "type": "DocType",
-      "link_to": "Vaccination Record",
-      "label": "Vaccination Record"
-    },
-    {
-      "type": "DocType",
-      "link_to": "Pet Hospitalization",
-      "label": "Pet Hospitalization"
-    },
-    {
+      "label": "Vaccination Due Report",
       "type": "Report",
-      "link_to": "Appointment Report",
-      "label": "Appointment Report"
+      "link_to": "Vaccination Due Report"
     },
     {
+      "label": "Revenue Report",
       "type": "Report",
-      "link_to": "Vaccination Due Report",
-      "label": "Vaccination Due Report"
-    },
-    {
-      "type": "Report",
-      "link_to": "Revenue Report",
-      "label": "Revenue Report"
-    },
-    {
-      "type": "DocType",
-      "link_to": "Vet Settings",
-      "label": "Vet Settings"
-    },
-    {
-      "type": "DocType",
-      "link_to": "Lab Test",
-      "label": "Lab Test"
+      "link_to": "Revenue Report"
     }
   ],
-
-  "content": "[{\"id\":\"cb-masters\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters & Configuration\",\"col\":12}},{\"id\":\"cb-clinical\",\"type\":\"card\",\"data\":{\"card_name\":\"Clinical Operations\",\"col\":12}},{\"id\":\"cb-diagnostics\",\"type\":\"card\",\"data\":{\"card_name\":\"Diagnostics & Lab\",\"col\":12}},{\"id\":\"cb-inpatient\",\"type\":\"card\",\"data\":{\"card_name\":\"Inpatient & Surgery\",\"col\":12}},{\"id\":\"cb-preventive\",\"type\":\"card\",\"data\":{\"card_name\":\"Preventive Care\",\"col\":12}},{\"id\":\"cb-services\",\"type\":\"card\",\"data\":{\"card_name\":\"Additional Services\",\"col\":12}},{\"id\":\"cb-reports\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports & Analytics\",\"col\":12}}]",
-
+  "content": "[{\"type\":\"card\",\"data\":{\"card_name\":\"Masters & Configuration\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Clinical Operations\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Diagnostics & Lab\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Inpatient & Surgery\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Preventive Care\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Additional Services\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Reports & Analytics\",\"col\":12}}]",
   "links": [
+    {"label": "Masters & Configuration", "type": "Card Break"},
+    {"label": "Animal Species", "link_to": "Animal Species", "link_type": "DocType", "type": "Link"},
+    {"label": "Animal Breed", "link_to": "Animal Breed", "link_type": "DocType", "type": "Link"},
+    {"label": "Pet Owner", "link_to": "Pet Owner", "link_type": "DocType", "type": "Link"},
+    {"label": "Patient Pet", "link_to": "Patient Pet", "link_type": "DocType", "type": "Link"},
+    {"label": "Veterinarian", "link_to": "Veterinarian", "link_type": "DocType", "type": "Link"},
+    {"label": "Branch Clinic", "link_to": "Branch Clinic", "link_type": "DocType", "type": "Link"},
+    {"label": "Hospital Ward", "link_to": "Hospital Ward", "link_type": "DocType", "type": "Link"},
+    {"label": "Hospital Bed", "link_to": "Hospital Bed", "link_type": "DocType", "type": "Link"},
+    {"label": "Vaccine", "link_to": "Vaccine", "link_type": "DocType", "type": "Link"},
+    {"label": "Lab Test Type", "link_to": "Lab Test Type", "link_type": "DocType", "type": "Link"},
+    {"label": "Vet Settings", "link_to": "Vet Settings", "link_type": "DocType", "type": "Link"},
 
-    {
-      "hidden": 0, "idx": 1,
-      "is_query_report": 0,
-      "label": "Masters & Configuration",
-      "link_count": 0,
-      "onboard": 1,
-      "title": "Masters & Configuration",
-      "type": "Card Break"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 2,
-      "is_query_report": 0,
-      "label": "Animal Species",
-      "link_count": 0,
-      "link_to": "Animal Species",
-      "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 3,
-      "is_query_report": 0,
-      "label": "Animal Breed",
-      "link_count": 0,
-      "link_to": "Animal Breed",
-      "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 4,
-      "is_query_report": 0,
-      "label": "Pet Owner",
-      "link_count": 0,
-      "link_to": "Pet Owner",
-      "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 5,
-      "is_query_report": 0,
-      "label": "Patient Pet",
-      "link_count": 0,
-      "link_to": "Patient Pet",
-      "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 6,
-      "is_query_report": 0,
-      "label": "Veterinarian",
-      "link_count": 0,
-      "link_to": "Veterinarian",
-      "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 7,
-      "is_query_report": 0,
-      "label": "Branch Clinic",
-      "link_count": 0,
-      "link_to": "Branch Clinic",
-      "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 8,
-      "is_query_report": 0,
-      "label": "Hospital Ward",
-      "link_count": 0,
-      "link_to": "Hospital Ward",
-      "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 9,
-      "is_query_report": 0,
-      "label": "Hospital Bed",
-      "link_count": 0,
-      "link_to": "Hospital Bed",
-      "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 10,
-      "is_query_report": 0,
-      "label": "Vaccine",
-      "link_count": 0,
-      "link_to": "Vaccine",
-      "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 11,
-      "is_query_report": 0,
-      "label": "Lab Test Type",
-      "link_count": 0,
-      "link_to": "Lab Test Type",
-      "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 12,
-      "is_query_report": 0,
-      "label": "Vet Settings",
-      "link_count": 0,
-      "link_to": "Vet Settings",
-      "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
-    },
+    {"label": "Clinical Operations", "type": "Card Break"},
+    {"label": "Vet Appointment", "link_to": "Vet Appointment", "link_type": "DocType", "type": "Link"},
+    {"label": "Vet Consultation", "link_to": "Vet Consultation", "link_type": "DocType", "type": "Link"},
+    {"label": "Prescription", "link_to": "Prescription", "link_type": "DocType", "type": "Link"},
 
-    {
-      "hidden": 0, "idx": 13,
-      "is_query_report": 0,
-      "label": "Clinical Operations",
-      "link_count": 0,
-      "onboard": 1,
-      "title": "Clinical Operations",
-      "type": "Card Break"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 14,
-      "is_query_report": 0,
-      "label": "Vet Appointment",
-      "link_count": 0,
-      "link_to": "Vet Appointment",
-      "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 15,
-      "is_query_report": 0,
-      "label": "Vet Consultation",
-      "link_count": 0,
-      "link_to": "Vet Consultation",
-      "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 16,
-      "is_query_report": 0,
-      "label": "Prescription",
-      "link_count": 0,
-      "link_to": "Prescription",
-      "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
-    },
+    {"label": "Diagnostics & Lab", "type": "Card Break"},
+    {"label": "Lab Test", "link_to": "Lab Test", "link_type": "DocType", "type": "Link"},
+    {"label": "Imaging Request", "link_to": "Imaging Request", "link_type": "DocType", "type": "Link"},
 
-    {
-      "hidden": 0, "idx": 17,
-      "is_query_report": 0,
-      "label": "Diagnostics & Lab",
-      "link_count": 0,
-      "onboard": 0,
-      "title": "Diagnostics & Lab",
-      "type": "Card Break"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 18,
-      "is_query_report": 0,
-      "label": "Lab Test",
-      "link_count": 0,
-      "link_to": "Lab Test",
-      "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 19,
-      "is_query_report": 0,
-      "label": "Imaging Request",
-      "link_count": 0,
-      "link_to": "Imaging Request",
-      "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
-    },
+    {"label": "Inpatient & Surgery", "type": "Card Break"},
+    {"label": "Pet Hospitalization", "link_to": "Pet Hospitalization", "link_type": "DocType", "type": "Link"},
+    {"label": "Surgery Record", "link_to": "Surgery Record", "link_type": "DocType", "type": "Link"},
 
-    {
-      "hidden": 0, "idx": 20,
-      "is_query_report": 0,
-      "label": "Inpatient & Surgery",
-      "link_count": 0,
-      "onboard": 0,
-      "title": "Inpatient & Surgery",
-      "type": "Card Break"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 21,
-      "is_query_report": 0,
-      "label": "Pet Hospitalization",
-      "link_count": 0,
-      "link_to": "Pet Hospitalization",
-      "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 22,
-      "is_query_report": 0,
-      "label": "Surgery Record",
-      "link_count": 0,
-      "link_to": "Surgery Record",
-      "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
-    },
+    {"label": "Preventive Care", "type": "Card Break"},
+    {"label": "Vaccination Record", "link_to": "Vaccination Record", "link_type": "DocType", "type": "Link"},
 
-    {
-      "hidden": 0, "idx": 23,
-      "is_query_report": 0,
-      "label": "Preventive Care",
-      "link_count": 0,
-      "onboard": 0,
-      "title": "Preventive Care",
-      "type": "Card Break"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 24,
-      "is_query_report": 0,
-      "label": "Vaccination Record",
-      "link_count": 0,
-      "link_to": "Vaccination Record",
-      "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
-    },
+    {"label": "Additional Services", "type": "Card Break"},
+    {"label": "Grooming Service", "link_to": "Grooming Service", "link_type": "DocType", "type": "Link"},
+    {"label": "Boarding Record", "link_to": "Boarding Record", "link_type": "DocType", "type": "Link"},
 
-    {
-      "hidden": 0, "idx": 25,
-      "is_query_report": 0,
-      "label": "Additional Services",
-      "link_count": 0,
-      "onboard": 0,
-      "title": "Additional Services",
-      "type": "Card Break"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 26,
-      "is_query_report": 0,
-      "label": "Grooming Service",
-      "link_count": 0,
-      "link_to": "Grooming Service",
-      "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 27,
-      "is_query_report": 0,
-      "label": "Boarding Record",
-      "link_count": 0,
-      "link_to": "Boarding Record",
-      "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
-    },
-
-    {
-      "hidden": 0, "idx": 28,
-      "is_query_report": 0,
-      "label": "Reports & Analytics",
-      "link_count": 0,
-      "onboard": 0,
-      "title": "Reports & Analytics",
-      "type": "Card Break"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 29,
-      "is_query_report": 1,
-      "label": "Appointment Report",
-      "link_count": 0,
-      "link_to": "Appointment Report",
-      "link_type": "Report",
-      "onboard": 0,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 30,
-      "is_query_report": 1,
-      "label": "Patient History Report",
-      "link_count": 0,
-      "link_to": "Patient History Report",
-      "link_type": "Report",
-      "onboard": 0,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 31,
-      "is_query_report": 1,
-      "label": "Lab Test Report",
-      "link_count": 0,
-      "link_to": "Lab Test Report",
-      "link_type": "Report",
-      "onboard": 0,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 32,
-      "is_query_report": 1,
-      "label": "Hospitalization Report",
-      "link_count": 0,
-      "link_to": "Hospitalization Report",
-      "link_type": "Report",
-      "onboard": 0,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 33,
-      "is_query_report": 1,
-      "label": "Vaccination Due Report",
-      "link_count": 0,
-      "link_to": "Vaccination Due Report",
-      "link_type": "Report",
-      "onboard": 0,
-      "type": "Link"
-    },
-    {
-      "dependencies": "", "hidden": 0, "idx": 34,
-      "is_query_report": 1,
-      "label": "Revenue Report",
-      "link_count": 0,
-      "link_to": "Revenue Report",
-      "link_type": "Report",
-      "onboard": 0,
-      "type": "Link"
-    }
+    {"label": "Reports & Analytics", "type": "Card Break"},
+    {"label": "Appointment Report", "link_to": "Appointment Report", "link_type": "Report", "is_query_report": 1, "type": "Link"},
+    {"label": "Patient History Report", "link_to": "Patient History Report", "link_type": "Report", "is_query_report": 1, "type": "Link"},
+    {"label": "Lab Test Report", "link_to": "Lab Test Report", "link_type": "Report", "is_query_report": 1, "type": "Link"},
+    {"label": "Hospitalization Report", "link_to": "Hospitalization Report", "link_type": "Report", "is_query_report": 1, "type": "Link"},
+    {"label": "Vaccination Due Report", "link_to": "Vaccination Due Report", "link_type": "Report", "is_query_report": 1, "type": "Link"},
+    {"label": "Revenue Report", "link_to": "Revenue Report", "link_type": "Report", "is_query_report": 1, "type": "Link"}
   ]
 }
