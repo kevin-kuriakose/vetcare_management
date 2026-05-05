@@ -1,0 +1,20 @@
+{
+  "name": "Animal Species",
+  "module": "Vetcare Management",
+  "doctype": "DocType",
+  "is_submittable": 0,
+  "naming_rule": "By fieldname",
+  "autoname": "field:species_name",
+  "fields": [
+    {"fieldname": "species_name", "label": "Species Name", "fieldtype": "Data", "reqd": 1, "in_list_view": 1, "bold": 1},
+    {"fieldname": "description", "label": "Description", "fieldtype": "Small Text"},
+    {"fieldname": "icon", "label": "Icon", "fieldtype": "Data"}
+  ],
+  "permissions": [
+    {"role": "Vet Admin", "read": 1, "write": 1, "create": 1, "delete": 1},
+    {"role": "Veterinarian", "read": 1},
+    {"role": "Vet Receptionist", "read": 1}
+  ],
+  "title_field": "species_name",
+  "track_changes": 1
+}

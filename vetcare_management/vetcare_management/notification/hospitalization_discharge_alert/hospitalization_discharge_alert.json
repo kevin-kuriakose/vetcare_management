@@ -1,0 +1,11 @@
+{
+  "name": "Hospitalization Discharge Alert",
+  "document_type": "Pet Hospitalization",
+  "event": "Days Before",
+  "days_in_advance": 1,
+  "date_changed": "expected_discharge_date",
+  "subject": "Discharge Tomorrow: {{ doc.patient_name }}",
+  "message": "<p>Dear {{ doc.owner_name }},</p><p><strong>{{ doc.patient_name }}</strong> is scheduled for discharge tomorrow. Please arrange for pickup or contact us to extend.</p>",
+  "enabled": 1,
+  "channel": "Email"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Vaccination Due Alert",
+  "document_type": "Vaccination Record",
+  "event": "Days Before",
+  "days_in_advance": 7,
+  "date_changed": "next_due_date",
+  "subject": "Vaccination Due: {{ doc.patient_name }} - {{ doc.vaccine }}",
+  "message": "<p>Dear {{ doc.owner_name }},</p><p><strong>{{ doc.patient_name }}</strong>'s <strong>{{ doc.vaccine }}</strong> vaccination is due on <strong>{{ doc.next_due_date }}</strong>. Please schedule an appointment.</p>",
+  "enabled": 1,
+  "channel": "Email"
+}

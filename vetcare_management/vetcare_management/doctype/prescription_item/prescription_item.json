@@ -1,0 +1,14 @@
+{
+  "name": "Prescription Item",
+  "module": "Vetcare Management",
+  "doctype": "DocType",
+  "istable": 1,
+  "fields": [
+    {"fieldname": "drug_name", "label": "Drug / Medicine Name", "fieldtype": "Link", "options": "Item", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "dosage", "label": "Dosage", "fieldtype": "Data", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "frequency", "label": "Frequency", "fieldtype": "Select", "options": "Once daily\nTwice daily\nThrice daily\nEvery 4 hours\nEvery 6 hours\nEvery 8 hours\nEvery 12 hours\nAs needed\nOnce weekly", "in_list_view": 1},
+    {"fieldname": "duration", "label": "Duration", "fieldtype": "Data", "in_list_view": 1},
+    {"fieldname": "route", "label": "Route", "fieldtype": "Select", "options": "Oral\nInjection (IM)\nInjection (IV)\nInjection (SC)\nTopical\nOphthalmic\nOtic\nRectal\nInhalation"},
+    {"fieldname": "notes", "label": "Notes", "fieldtype": "Data"}
+  ]
+}

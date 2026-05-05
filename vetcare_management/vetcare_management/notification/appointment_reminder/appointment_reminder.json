@@ -1,0 +1,11 @@
+{
+  "name": "Appointment Reminder",
+  "document_type": "Vet Appointment",
+  "event": "Days Before",
+  "days_in_advance": 1,
+  "date_changed": "appointment_date",
+  "subject": "Reminder: Appointment for {{ doc.patient_name }} tomorrow",
+  "message": "<p>Dear {{ doc.owner_name }},</p><p>Reminder: <strong>{{ doc.patient_name }}</strong> has a <strong>{{ doc.appointment_type }}</strong> appointment tomorrow at <strong>{{ doc.appointment_time }}</strong> with <strong>{{ doc.veterinarian_name }}</strong>.</p>",
+  "enabled": 1,
+  "channel": "Email"
+}

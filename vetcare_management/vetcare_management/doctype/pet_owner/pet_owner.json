@@ -1,0 +1,38 @@
+{
+  "name": "Pet Owner",
+  "module": "Vetcare Management",
+  "doctype": "DocType",
+  "naming_rule": "Expression",
+  "autoname": "PO-.####",
+  "title_field": "full_name",
+  "search_fields": "full_name,mobile_no,email_id",
+  "fields": [
+    {"fieldname": "full_name", "label": "Full Name", "fieldtype": "Data", "reqd": 1, "in_list_view": 1, "bold": 1},
+    {"fieldname": "col_break_1", "fieldtype": "Column Break"},
+    {"fieldname": "mobile_no", "label": "Mobile No", "fieldtype": "Phone", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "sec_contact", "label": "Contact Information", "fieldtype": "Section Break"},
+    {"fieldname": "email_id", "label": "Email", "fieldtype": "Data", "options": "Email", "in_list_view": 1},
+    {"fieldname": "col_break_2", "fieldtype": "Column Break"},
+    {"fieldname": "alternate_mobile", "label": "Alternate Mobile", "fieldtype": "Phone"},
+    {"fieldname": "sec_address", "label": "Address", "fieldtype": "Section Break", "collapsible": 1},
+    {"fieldname": "address_line1", "label": "Address Line 1", "fieldtype": "Data"},
+    {"fieldname": "address_line2", "label": "Address Line 2", "fieldtype": "Data"},
+    {"fieldname": "col_break_3", "fieldtype": "Column Break"},
+    {"fieldname": "city", "label": "City", "fieldtype": "Data"},
+    {"fieldname": "state", "label": "State", "fieldtype": "Data"},
+    {"fieldname": "pincode", "label": "PIN Code", "fieldtype": "Data"},
+    {"fieldname": "sec_other", "label": "Other Details", "fieldtype": "Section Break", "collapsible": 1},
+    {"fieldname": "id_proof_type", "label": "ID Proof Type", "fieldtype": "Select", "options": "\nAadhaar Card\nPAN Card\nPassport\nDriving License\nVoter ID"},
+    {"fieldname": "id_proof_no", "label": "ID Proof Number", "fieldtype": "Data"},
+    {"fieldname": "col_break_4", "fieldtype": "Column Break"},
+    {"fieldname": "customer", "label": "ERPNext Customer", "fieldtype": "Link", "options": "Customer"},
+    {"fieldname": "notes", "label": "Notes", "fieldtype": "Small Text"}
+  ],
+  "permissions": [
+    {"role": "Vet Admin", "read": 1, "write": 1, "create": 1, "delete": 1},
+    {"role": "Veterinarian", "read": 1, "write": 1, "create": 1},
+    {"role": "Vet Receptionist", "read": 1, "write": 1, "create": 1}
+  ],
+  "track_changes": 1,
+  "quick_entry": 1
+}

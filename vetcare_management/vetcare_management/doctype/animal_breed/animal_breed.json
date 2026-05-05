@@ -1,0 +1,20 @@
+{
+  "name": "Animal Breed",
+  "module": "Vetcare Management",
+  "doctype": "DocType",
+  "naming_rule": "By fieldname",
+  "autoname": "field:breed_name",
+  "fields": [
+    {"fieldname": "breed_name", "label": "Breed Name", "fieldtype": "Data", "reqd": 1, "in_list_view": 1, "bold": 1},
+    {"fieldname": "species", "label": "Species", "fieldtype": "Link", "options": "Animal Species", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "average_lifespan", "label": "Average Lifespan (years)", "fieldtype": "Float"},
+    {"fieldname": "description", "label": "Description", "fieldtype": "Small Text"}
+  ],
+  "permissions": [
+    {"role": "Vet Admin", "read": 1, "write": 1, "create": 1, "delete": 1},
+    {"role": "Veterinarian", "read": 1},
+    {"role": "Vet Receptionist", "read": 1}
+  ],
+  "title_field": "breed_name",
+  "track_changes": 1
+}

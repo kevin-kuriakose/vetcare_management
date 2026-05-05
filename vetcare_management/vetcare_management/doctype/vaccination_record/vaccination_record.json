@@ -1,0 +1,33 @@
+{
+  "name": "Vaccination Record",
+  "module": "Vetcare Management",
+  "doctype": "DocType",
+  "is_submittable": 1,
+  "naming_rule": "Expression",
+  "autoname": "VAC-.YYYY.-.####",
+  "fields": [
+    {"fieldname": "patient", "label": "Patient (Pet)", "fieldtype": "Link", "options": "Patient Pet", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "patient_name", "label": "Pet Name", "fieldtype": "Data", "fetch_from": "patient.pet_name", "read_only": 1},
+    {"fieldname": "col_break_1", "fieldtype": "Column Break"},
+    {"fieldname": "owner", "label": "Owner", "fieldtype": "Link", "options": "Pet Owner"},
+    {"fieldname": "vaccine", "label": "Vaccine", "fieldtype": "Link", "options": "Vaccine", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "vaccination_date", "label": "Vaccination Date", "fieldtype": "Date", "reqd": 1, "default": "Today", "in_list_view": 1},
+    {"fieldname": "next_due_date", "label": "Next Due Date", "fieldtype": "Date", "in_list_view": 1},
+    {"fieldname": "administered_by", "label": "Administered By", "fieldtype": "Link", "options": "Veterinarian"},
+    {"fieldname": "col_break_2", "fieldtype": "Column Break"},
+    {"fieldname": "batch_no", "label": "Batch No", "fieldtype": "Data"},
+    {"fieldname": "manufacturer", "label": "Manufacturer", "fieldtype": "Data"},
+    {"fieldname": "dose_ml", "label": "Dose (ml)", "fieldtype": "Float"},
+    {"fieldname": "route", "label": "Route", "fieldtype": "Select", "options": "Subcutaneous\nIntramuscular\nIntranasal\nOral"},
+    {"fieldname": "site", "label": "Injection Site", "fieldtype": "Data"},
+    {"fieldname": "reaction_noted", "label": "Reaction Noted", "fieldtype": "Check"},
+    {"fieldname": "reaction_details", "label": "Reaction Details", "fieldtype": "Small Text", "depends_on": "reaction_noted"},
+    {"fieldname": "notes", "label": "Notes", "fieldtype": "Small Text"}
+  ],
+  "permissions": [
+    {"role": "Vet Admin", "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1},
+    {"role": "Veterinarian", "read": 1, "write": 1, "create": 1, "submit": 1},
+    {"role": "Vet Receptionist", "read": 1}
+  ],
+  "track_changes": 1
+}

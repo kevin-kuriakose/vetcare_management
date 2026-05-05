@@ -1,0 +1,28 @@
+{
+  "name": "Prescription",
+  "module": "Vetcare Management",
+  "doctype": "DocType",
+  "is_submittable": 1,
+  "naming_rule": "Expression",
+  "autoname": "RX-.YYYY.-.####",
+  "fields": [
+    {"fieldname": "patient", "label": "Patient (Pet)", "fieldtype": "Link", "options": "Patient Pet", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "patient_name", "label": "Pet Name", "fieldtype": "Data", "fetch_from": "patient.pet_name", "read_only": 1},
+    {"fieldname": "col_break_1", "fieldtype": "Column Break"},
+    {"fieldname": "owner", "label": "Owner", "fieldtype": "Link", "options": "Pet Owner"},
+    {"fieldname": "prescription_date", "label": "Date", "fieldtype": "Date", "default": "Today", "reqd": 1},
+    {"fieldname": "veterinarian", "label": "Prescribed By", "fieldtype": "Link", "options": "Veterinarian", "reqd": 1},
+    {"fieldname": "consultation", "label": "Consultation", "fieldtype": "Link", "options": "Vet Consultation"},
+    {"fieldname": "sec_drugs", "label": "Medications", "fieldtype": "Section Break"},
+    {"fieldname": "medications", "label": "Medications", "fieldtype": "Table", "options": "Prescription Item", "reqd": 1},
+    {"fieldname": "sec_instructions", "label": "Instructions", "fieldtype": "Section Break"},
+    {"fieldname": "instructions", "label": "Special Instructions", "fieldtype": "Text Editor"},
+    {"fieldname": "dietary_advice", "label": "Dietary Advice", "fieldtype": "Small Text"}
+  ],
+  "permissions": [
+    {"role": "Vet Admin", "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1, "print": 1},
+    {"role": "Veterinarian", "read": 1, "write": 1, "create": 1, "submit": 1, "print": 1},
+    {"role": "Vet Receptionist", "read": 1, "print": 1}
+  ],
+  "track_changes": 1
+}

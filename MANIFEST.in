@@ -1,0 +1,9 @@
+include *.md
+include *.txt
+include *.toml
+recursive-include vetcare_management/public *
+recursive-include vetcare_management/templates *
+recursive-include vetcare_management/vetcare_management/doctype *.json *.js *.py
+recursive-include vetcare_management/vetcare_management/report *.json *.py *.js
+recursive-include vetcare_management/vetcare_management/workspace *.json
+recursive-include vetcare_management/vetcare_management/notification *.json

@@ -1,0 +1,20 @@
+{
+  "name": "Hospital Bed",
+  "module": "Vetcare Management",
+  "doctype": "DocType",
+  "naming_rule": "By fieldname",
+  "autoname": "field:bed_number",
+  "fields": [
+    {"fieldname": "bed_number", "label": "Bed Number / ID", "fieldtype": "Data", "reqd": 1, "in_list_view": 1, "bold": 1},
+    {"fieldname": "ward", "label": "Ward", "fieldtype": "Link", "options": "Hospital Ward", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "bed_type", "label": "Bed Type", "fieldtype": "Select", "options": "Standard\nICU\nIsolation\nNeonatal\nPost-Op", "in_list_view": 1},
+    {"fieldname": "status", "label": "Status", "fieldtype": "Select", "options": "Available\nOccupied\nUnder Maintenance\nReserved", "default": "Available", "in_list_view": 1},
+    {"fieldname": "current_patient", "label": "Current Patient", "fieldtype": "Link", "options": "Patient Pet", "read_only": 1},
+    {"fieldname": "daily_rate", "label": "Daily Rate", "fieldtype": "Currency"}
+  ],
+  "permissions": [
+    {"role": "Vet Admin", "read": 1, "write": 1, "create": 1, "delete": 1},
+    {"role": "Veterinarian", "read": 1, "write": 1},
+    {"role": "Vet Receptionist", "read": 1}
+  ]
+}

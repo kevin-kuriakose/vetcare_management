@@ -1,0 +1,7 @@
+{
+  "name": "Vaccination Due Report",
+  "module": "Vetcare Management",
+  "report_type": "Script Report",
+  "ref_doctype": "Vaccination Record",
+  "is_standard": "Yes"
+}

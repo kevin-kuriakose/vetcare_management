@@ -1,0 +1,62 @@
+{
+  "name": "Vetcare Management",
+  "label": "Vetcare Management",
+  "module": "Vetcare Management",
+  "icon": "🐾",
+  "type": "module",
+  "is_standard": 1,
+  "shortcuts": [
+    {"label": "New Appointment", "type": "DocType", "doc_view": "new", "link_to": "Vet Appointment", "color": "#4CAF50"},
+    {"label": "Patient Pets", "type": "DocType", "link_to": "Patient Pet", "color": "#2196F3"},
+    {"label": "Pet Owners", "type": "DocType", "link_to": "Pet Owner", "color": "#FF9800"},
+    {"label": "Vaccination Due Report", "type": "Report", "link_to": "Vaccination Due Report", "color": "#F44336"},
+    {"label": "Vet Settings", "type": "DocType", "link_to": "Vet Settings", "color": "#607D8B"}
+  ],
+  "links": [
+    {
+      "label": "Masters & Configuration",
+      "type": "Card Break",
+      "items": [
+        {"label": "Animal Species", "type": "DocType", "link_to": "Animal Species"},
+        {"label": "Animal Breed", "type": "DocType", "link_to": "Animal Breed"},
+        {"label": "Pet Owner", "type": "DocType", "link_to": "Pet Owner"},
+        {"label": "Patient Pet", "type": "DocType", "link_to": "Patient Pet"},
+        {"label": "Veterinarian", "type": "DocType", "link_to": "Veterinarian"},
+        {"label": "Branch Clinic", "type": "DocType", "link_to": "Branch Clinic"},
+        {"label": "Hospital Ward", "type": "DocType", "link_to": "Hospital Ward"},
+        {"label": "Hospital Bed", "type": "DocType", "link_to": "Hospital Bed"},
+        {"label": "Vaccine", "type": "DocType", "link_to": "Vaccine"},
+        {"label": "Lab Test Type", "type": "DocType", "link_to": "Lab Test Type"},
+        {"label": "Vet Settings", "type": "DocType", "link_to": "Vet Settings"}
+      ]
+    },
+    {
+      "label": "Clinical Operations",
+      "type": "Card Break",
+      "items": [
+        {"label": "Vet Appointment", "type": "DocType", "link_to": "Vet Appointment"},
+        {"label": "Vet Consultation", "type": "DocType", "link_to": "Vet Consultation"},
+        {"label": "Prescription", "type": "DocType", "link_to": "Prescription"},
+        {"label": "Pet Hospitalization", "type": "DocType", "link_to": "Pet Hospitalization"},
+        {"label": "Surgery Record", "type": "DocType", "link_to": "Surgery Record"},
+        {"label": "Lab Test", "type": "DocType", "link_to": "Lab Test"},
+        {"label": "Imaging Request", "type": "DocType", "link_to": "Imaging Request"},
+        {"label": "Vaccination Record", "type": "DocType", "link_to": "Vaccination Record"},
+        {"label": "Grooming Service", "type": "DocType", "link_to": "Grooming Service"},
+        {"label": "Boarding Record", "type": "DocType", "link_to": "Boarding Record"}
+      ]
+    },
+    {
+      "label": "Reports & Analytics",
+      "type": "Card Break",
+      "items": [
+        {"label": "Appointment Report", "type": "Report", "link_to": "Appointment Report"},
+        {"label": "Patient History Report", "type": "Report", "link_to": "Patient History Report"},
+        {"label": "Lab Test Report", "type": "Report", "link_to": "Lab Test Report"},
+        {"label": "Hospitalization Report", "type": "Report", "link_to": "Hospitalization Report"},
+        {"label": "Vaccination Due Report", "type": "Report", "link_to": "Vaccination Due Report"},
+        {"label": "Revenue Report", "type": "Report", "link_to": "Revenue Report"}
+      ]
+    }
+  ]
+}

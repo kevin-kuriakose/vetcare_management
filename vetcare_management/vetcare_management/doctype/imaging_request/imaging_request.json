@@ -1,0 +1,32 @@
+{
+  "name": "Imaging Request",
+  "module": "Vetcare Management",
+  "doctype": "DocType",
+  "is_submittable": 1,
+  "naming_rule": "Expression",
+  "autoname": "IMG-.YYYY.-.####",
+  "fields": [
+    {"fieldname": "patient", "label": "Patient (Pet)", "fieldtype": "Link", "options": "Patient Pet", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "patient_name", "label": "Pet Name", "fieldtype": "Data", "fetch_from": "patient.pet_name", "read_only": 1},
+    {"fieldname": "col_break_1", "fieldtype": "Column Break"},
+    {"fieldname": "owner", "label": "Owner", "fieldtype": "Link", "options": "Pet Owner"},
+    {"fieldname": "imaging_type", "label": "Imaging Type", "fieldtype": "Select", "options": "X-Ray\nUltrasound\nCT Scan\nMRI\nEchocardiography\nEndoscopy\nOphthalmoscopy", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "requested_by", "label": "Requested By", "fieldtype": "Link", "options": "Veterinarian"},
+    {"fieldname": "request_date", "label": "Request Date", "fieldtype": "Date", "default": "Today"},
+    {"fieldname": "body_part", "label": "Body Part / Region", "fieldtype": "Data"},
+    {"fieldname": "clinical_indication", "label": "Clinical Indication", "fieldtype": "Small Text"},
+    {"fieldname": "sec_result", "label": "Results", "fieldtype": "Section Break"},
+    {"fieldname": "result_date", "label": "Result Date", "fieldtype": "Date"},
+    {"fieldname": "radiologist_report", "label": "Radiologist / Sonologist Report", "fieldtype": "Text Editor"},
+    {"fieldname": "col_break_2", "fieldtype": "Column Break"},
+    {"fieldname": "image_attachment", "label": "Image Attachment", "fieldtype": "Attach"},
+    {"fieldname": "status", "label": "Status", "fieldtype": "Select", "options": "Requested\nScheduled\nCompleted\nCancelled", "default": "Requested", "in_list_view": 1},
+    {"fieldname": "amount", "label": "Amount", "fieldtype": "Currency"}
+  ],
+  "permissions": [
+    {"role": "Vet Admin", "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1},
+    {"role": "Veterinarian", "read": 1, "write": 1, "create": 1, "submit": 1},
+    {"role": "Vet Lab Technician", "read": 1, "write": 1},
+    {"role": "Vet Receptionist", "read": 1}
+  ]
+}

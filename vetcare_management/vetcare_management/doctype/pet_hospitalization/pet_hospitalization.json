@@ -1,0 +1,37 @@
+{
+  "name": "Pet Hospitalization",
+  "module": "Vetcare Management",
+  "doctype": "DocType",
+  "is_submittable": 1,
+  "naming_rule": "Expression",
+  "autoname": "HOS-.YYYY.-.####",
+  "title_field": "patient_name",
+  "fields": [
+    {"fieldname": "patient", "label": "Patient (Pet)", "fieldtype": "Link", "options": "Patient Pet", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "patient_name", "label": "Pet Name", "fieldtype": "Data", "fetch_from": "patient.pet_name", "read_only": 1, "in_list_view": 1},
+    {"fieldname": "col_break_1", "fieldtype": "Column Break"},
+    {"fieldname": "owner", "label": "Owner", "fieldtype": "Link", "options": "Pet Owner", "reqd": 1},
+    {"fieldname": "admitted_by", "label": "Admitted By", "fieldtype": "Link", "options": "Veterinarian", "reqd": 1},
+    {"fieldname": "sec_admission", "label": "Admission Details", "fieldtype": "Section Break"},
+    {"fieldname": "admission_date", "label": "Admission Date", "fieldtype": "Datetime", "reqd": 1, "default": "Now"},
+    {"fieldname": "expected_discharge_date", "label": "Expected Discharge Date", "fieldtype": "Date"},
+    {"fieldname": "col_break_2", "fieldtype": "Column Break"},
+    {"fieldname": "bed", "label": "Hospital Bed", "fieldtype": "Link", "options": "Hospital Bed", "reqd": 1},
+    {"fieldname": "ward", "label": "Ward", "fieldtype": "Data", "fetch_from": "bed.ward", "read_only": 1},
+    {"fieldname": "admission_reason", "label": "Admission Reason / Diagnosis", "fieldtype": "Text", "reqd": 1},
+    {"fieldname": "sec_discharge", "label": "Discharge Details", "fieldtype": "Section Break", "collapsible": 1},
+    {"fieldname": "discharge_date", "label": "Actual Discharge Date", "fieldtype": "Datetime"},
+    {"fieldname": "discharge_condition", "label": "Discharge Condition", "fieldtype": "Select", "options": "\nRecovered\nImproved\nUnchanged\nDeteriorated\nDeceased\nDischarged Against Advice"},
+    {"fieldname": "col_break_3", "fieldtype": "Column Break"},
+    {"fieldname": "discharge_notes", "label": "Discharge Notes", "fieldtype": "Text Editor"},
+    {"fieldname": "status", "label": "Status", "fieldtype": "Select", "options": "Admitted\nDischarged", "default": "Admitted", "in_list_view": 1},
+    {"fieldname": "sec_daily", "label": "Daily Monitoring", "fieldtype": "Section Break"},
+    {"fieldname": "daily_notes", "label": "Daily Monitoring Notes", "fieldtype": "Text Editor"}
+  ],
+  "permissions": [
+    {"role": "Vet Admin", "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1},
+    {"role": "Veterinarian", "read": 1, "write": 1, "create": 1, "submit": 1},
+    {"role": "Vet Receptionist", "read": 1}
+  ],
+  "track_changes": 1
+}

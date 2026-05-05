@@ -1,0 +1,21 @@
+{
+  "name": "Vaccine",
+  "module": "Vetcare Management",
+  "doctype": "DocType",
+  "naming_rule": "By fieldname",
+  "autoname": "field:vaccine_name",
+  "fields": [
+    {"fieldname": "vaccine_name", "label": "Vaccine Name", "fieldtype": "Data", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "vaccine_type", "label": "Type", "fieldtype": "Select", "options": "Core\nNon-Core\nOptional", "in_list_view": 1},
+    {"fieldname": "applicable_species", "label": "Applicable Species", "fieldtype": "Link", "options": "Animal Species"},
+    {"fieldname": "col_break_1", "fieldtype": "Column Break"},
+    {"fieldname": "manufacturer", "label": "Manufacturer", "fieldtype": "Data"},
+    {"fieldname": "booster_interval_days", "label": "Booster Interval (Days)", "fieldtype": "Int", "default": "365"},
+    {"fieldname": "description", "label": "Description", "fieldtype": "Small Text"}
+  ],
+  "permissions": [
+    {"role": "Vet Admin", "read": 1, "write": 1, "create": 1, "delete": 1},
+    {"role": "Veterinarian", "read": 1},
+    {"role": "Vet Receptionist", "read": 1}
+  ]
+}

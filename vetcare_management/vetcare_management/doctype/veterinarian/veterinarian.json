@@ -1,0 +1,30 @@
+{
+  "name": "Veterinarian",
+  "module": "Vetcare Management",
+  "doctype": "DocType",
+  "naming_rule": "Expression",
+  "autoname": "VET-.####",
+  "title_field": "full_name",
+  "fields": [
+    {"fieldname": "full_name", "label": "Full Name", "fieldtype": "Data", "reqd": 1, "in_list_view": 1, "bold": 1},
+    {"fieldname": "designation", "label": "Designation", "fieldtype": "Select", "options": "Veterinarian\nSenior Veterinarian\nSurgeon\nSpecialist\nConsultant\nIntern", "in_list_view": 1},
+    {"fieldname": "col_break_1", "fieldtype": "Column Break"},
+    {"fieldname": "mobile_no", "label": "Mobile No", "fieldtype": "Phone"},
+    {"fieldname": "email_id", "label": "Email", "fieldtype": "Data", "options": "Email"},
+    {"fieldname": "sec_qual", "label": "Qualifications", "fieldtype": "Section Break"},
+    {"fieldname": "license_no", "label": "License No", "fieldtype": "Data"},
+    {"fieldname": "qualification", "label": "Qualification", "fieldtype": "Data"},
+    {"fieldname": "specializations", "label": "Specializations", "fieldtype": "Small Text"},
+    {"fieldname": "col_break_2", "fieldtype": "Column Break"},
+    {"fieldname": "experience_years", "label": "Experience (Years)", "fieldtype": "Int"},
+    {"fieldname": "branch", "label": "Branch / Clinic", "fieldtype": "Link", "options": "Branch Clinic"},
+    {"fieldname": "user", "label": "System User", "fieldtype": "Link", "options": "User"},
+    {"fieldname": "is_active", "label": "Is Active", "fieldtype": "Check", "default": "1"}
+  ],
+  "permissions": [
+    {"role": "Vet Admin", "read": 1, "write": 1, "create": 1, "delete": 1},
+    {"role": "Veterinarian", "read": 1},
+    {"role": "Vet Receptionist", "read": 1}
+  ],
+  "track_changes": 1
+}

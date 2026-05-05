@@ -1,0 +1,7 @@
+{
+  "name": "Hospitalization Report",
+  "module": "Vetcare Management",
+  "report_type": "Script Report",
+  "ref_doctype": "Pet Hospitalization",
+  "is_standard": "Yes"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Grooming Service",
+  "module": "Vetcare Management",
+  "doctype": "DocType",
+  "is_submittable": 1,
+  "naming_rule": "Expression",
+  "autoname": "GRM-.YYYY.-.####",
+  "fields": [
+    {"fieldname": "patient", "label": "Patient (Pet)", "fieldtype": "Link", "options": "Patient Pet", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "patient_name", "label": "Pet Name", "fieldtype": "Data", "fetch_from": "patient.pet_name", "read_only": 1},
+    {"fieldname": "col_break_1", "fieldtype": "Column Break"},
+    {"fieldname": "owner", "label": "Owner", "fieldtype": "Link", "options": "Pet Owner"},
+    {"fieldname": "grooming_date", "label": "Grooming Date", "fieldtype": "Date", "reqd": 1, "default": "Today", "in_list_view": 1},
+    {"fieldname": "groomer", "label": "Groomer", "fieldtype": "Data"},
+    {"fieldname": "branch", "label": "Branch", "fieldtype": "Link", "options": "Branch Clinic"},
+    {"fieldname": "sec_services", "label": "Services", "fieldtype": "Section Break"},
+    {"fieldname": "services_provided", "label": "Services Provided", "fieldtype": "Small Text"},
+    {"fieldname": "col_break_2", "fieldtype": "Column Break"},
+    {"fieldname": "grooming_notes", "label": "Grooming Notes", "fieldtype": "Small Text"},
+    {"fieldname": "total_amount", "label": "Total Amount", "fieldtype": "Currency"},
+    {"fieldname": "status", "label": "Status", "fieldtype": "Select", "options": "Scheduled\nIn Progress\nCompleted\nCancelled", "default": "Scheduled", "in_list_view": 1}
+  ],
+  "permissions": [
+    {"role": "Vet Admin", "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1},
+    {"role": "Vet Groomer", "read": 1, "write": 1, "create": 1, "submit": 1},
+    {"role": "Vet Receptionist", "read": 1, "write": 1, "create": 1}
+  ]
+}

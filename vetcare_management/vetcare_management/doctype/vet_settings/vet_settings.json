@@ -1,0 +1,23 @@
+{
+  "name": "Vet Settings",
+  "module": "Vetcare Management",
+  "doctype": "DocType",
+  "issingle": 1,
+  "fields": [
+    {"fieldname": "hospital_name", "label": "Hospital Name", "fieldtype": "Data", "default": "Vetcare Hospital"},
+    {"fieldname": "default_currency", "label": "Default Currency", "fieldtype": "Link", "options": "Currency", "default": "INR"},
+    {"fieldname": "col_break_1", "fieldtype": "Column Break"},
+    {"fieldname": "default_branch", "label": "Default Branch", "fieldtype": "Link", "options": "Branch Clinic"},
+    {"fieldname": "appointment_reminder_hours", "label": "Appointment Reminder (hours before)", "fieldtype": "Int", "default": "24"},
+    {"fieldname": "vaccination_reminder_days", "label": "Vaccination Reminder (days before)", "fieldtype": "Int", "default": "7"},
+    {"fieldname": "sec_billing", "label": "Billing Settings", "fieldtype": "Section Break"},
+    {"fieldname": "default_income_account", "label": "Default Income Account", "fieldtype": "Link", "options": "Account"},
+    {"fieldname": "default_cost_center", "label": "Default Cost Center", "fieldtype": "Link", "options": "Cost Center"},
+    {"fieldname": "sec_naming", "label": "Naming Series", "fieldtype": "Section Break"},
+    {"fieldname": "appointment_naming_series", "label": "Appointment Series", "fieldtype": "Data", "default": "APT-.YYYY.-.####"}
+  ],
+  "permissions": [
+    {"role": "Vet Admin", "read": 1, "write": 1},
+    {"role": "System Manager", "read": 1, "write": 1}
+  ]
+}
